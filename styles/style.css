@@ -1,0 +1,755 @@
+/*Document*/
+.Document{
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+.table-div {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.cos{
+    background-image: url("../static/fondo_web.png");
+    background-size: cover;
+    
+}
+
+.cos-aut{
+    background-image: url("../static/fondo_web_autobot.png");
+    background-size: cover;
+    
+}
+
+.cos-dec{
+    background-image: url("../static/fondo_web_decepticon.png");
+    background-size: cover;
+    
+}
+
+/*Estils taula*/
+
+.table-div {
+    background: linear-gradient(135deg, rgba(0, 120, 255, 0.1), rgba(0, 200, 255, 0.1));
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.5), 0 0 30px rgba(0, 120, 255, 0.4);
+}
+
+.table-div .row {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 150, 255, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.table-div .row:last-child {
+    border-bottom: none;
+}
+
+.table-div .cell {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid rgba(0, 150, 255, 0.3);
+    color: white;
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.7), 0 0 10px rgba(0, 200, 255, 0.5);
+}
+
+.table-div .cell:last-child {
+    border-right: none;
+}
+
+.table-div .header {
+    background-color: rgba(0, 120, 255, 0.2);
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    text-shadow: 0 0 5px rgba(0, 120, 255, 0.7);
+}
+
+.table-div .row:nth-child(even) {
+    background-color: rgba(0, 200, 255, 0.1);
+}
+
+.table-div .row:hover {
+    background-color: rgba(0, 150, 255, 0.3);
+    transform: scale(1.02);
+}
+
+.table-div .row + .row {
+    margin-top: 10px;
+}
+
+/*text*/
+.paragraf {
+    font-size: 16px; 
+    line-height: 1.5;
+    margin-bottom: 15px; 
+    text-align: justify; 
+    color: white;
+}
+
+
+/* Barra navegacio */
+/*Fons de la barra de navegació*/
+.custom-navbar {
+    background: linear-gradient(90deg, #212121 0%, #333333 100%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Logotip */
+.navbar-brand img {
+    max-height: 100px;
+    width: auto;
+}
+
+/*Estils generals dels enllaços*/
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px; /*Espais entre enllaços*/
+    transition: all 0.3s ease; /*transicio suau*/
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0, 150, 255, 0.5);
+    /*Fons lleuger quan s'hi passa el ratolí*/
+    background-color: rgba(0, 200, 255, 0.5);
+    border-radius: 5px; /*Arrodonir les cantonades de l'enllaç*/
+}
+
+
+/*Estils avançats per a la barra de cerca*/
+.form-inline .form-control {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 20px; /*Afegir espai a l'esquerra del text*/
+    transition: all 0.3s ease;
+}
+
+/*Efecte de focus en la barra de cerca*/
+.form-inline .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 150, 255, 0.5)0;
+    outline: none;
+    color: white;
+}
+
+/*Estil per al botó de cerca*/
+.form-inline .btn {
+    border-radius: 25px;
+    background-color: rgba(0, 150, 255, 0.5);
+    color: rgba(0, 200, 255, 0.5);
+    border: none;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.form-inline .btn:hover {
+    background-color: rgba(0, 200, 255, 0.5);
+}
+
+/*Menú per mòbil (navbar-toggler)*/
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /*Canviar el color del botó per a mòbil*/
+}
+
+.navbar-toggler-icon {
+    background-color: white; /*Canviar el color de la icona del botó*/
+}
+
+/*Millorar la separació entre els elements de la barra*/
+.navbar-nav .nav-item {
+    margin-left: 20px; /*Afegir espai entre els elements de la barra*/
+}
+
+/*Millorar la visibilitat de la barra de navegació en mòbil*/
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px; /*Reduir la mida de la font en pantalles petites*/
+    }
+}
+
+/*Moure barra navegacio si es fa scroll cap a baix*/
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: top 0.3s;
+}
+
+.img-fluid {
+    width: 100px; 
+    height: 100px;
+    margin-left: 80px;    
+}
+
+/*Text de la pagina*/
+.titol {
+    font-family: "Transformers, Regular";
+}
+
+.paragraf {
+    font-family: "Orbitron";
+}
+
+.row.header{
+    font-family: "Orbitron";
+    font-weight: bold;
+}
+
+.row {
+    font-family: "Roboto";
+}
+
+/*Fonts*/
+@font-face {
+    font-family: 'Transformers, Regular';
+    src: url('../fonts/Transformers_Movie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Orbitron*/
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*Roboto*/
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/*Estils que fan que sembli una pantalla hologràfica*/
+.finestra {
+    background: linear-gradient(135deg, rgba(0, 120, 255, 0.2), rgba(0, 200, 255, 0.1));
+    border: 2px solid rgba(0, 180, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.6), 0 0 30px rgba(0, 120, 255, 0.4);
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.7), 0 0 10px rgba(0, 200, 255, 0.5);
+}
+
+.finestra legend {
+    border: 1px solid rgba(0, 180, 255, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: rgba(0, 100, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.7);
+    font-size: 1.5em;
+}
+
+.finestra a {
+    color: rgba(0, 200, 255, 0.9);
+    text-decoration: underline;
+}
+
+.finestra a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 200, 255, 1);
+}
+
+
+/*Pantalla per a Autobots*/
+
+.finestra-vermell {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 50, 50, 0.1));
+    border: 2px solid rgba(255, 50, 50, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 50, 50, 0.6), 0 0 30px rgba(255, 0, 0, 0.4);
+    padding: 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 0 0 5px rgba(255, 50, 50, 0.7), 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.finestra-vermell legend {
+    border: 1px solid rgba(255, 50, 50, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: rgba(255, 100, 100, 0.2);
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 50, 50, 0.7);
+    font-size: 1.5em;
+}
+
+.finestra-vermell a {
+    color: white;
+    text-decoration: underline;
+}
+
+.finestra-vermell a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(255, 50, 50, 1);
+}
+
+/*Pantalla per a Decepticons*/
+.finestra-lila {
+    background: linear-gradient(135deg, rgba(128, 0, 128, 0.2), rgba(180, 0, 255, 0.1));
+    border: 2px solid rgba(180, 0, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(180, 0, 255, 0.6), 0 0 30px rgba(128, 0, 128, 0.4);
+    padding: 20px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 0 0 5px rgba(180, 0, 255, 0.7), 0 0 10px rgba(128, 0, 128, 0.5);
+}
+
+.finestra-lila legend {
+    border: 1px solid rgba(180, 0, 255, 0.7);
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: rgba(180, 100, 255, 0.2);
+    color: white;
+    text-shadow: 0 0 5px rgba(180, 0, 255, 0.7);
+    font-size: 1.5em;
+}
+
+.finestra-lila a {
+    color: white;
+    text-decoration: underline;
+}
+
+.finestra-lila a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(180, 0, 255, 1);
+}
+
+
+.contenidortaula {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: #000; 
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    z-index: 1000; 
+}
+
+.contenidortaula.scroll {
+    transform: translateY(1px);
+}
+
+
+/*Estil per peu de pàgina*/
+.custom-footer {
+    width: 100vw; 
+    margin: 0; 
+    padding: 30px 50px; 
+    background: linear-gradient(90deg, #212121 0%, #333333 100%);
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-footer .container-fluid {
+    max-width: 100%;
+    padding: 0 50px; 
+}
+
+.custom-footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.custom-footer a:hover {
+    color: #ffcc00;
+}
+
+.custom-footer .social-icons img {
+    width: 32px;
+    margin-right: 20px; 
+    transition: transform 0.3s ease;
+}
+
+.custom-footer .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.custom-footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    font-family: "Transformers, Regular";
+}
+
+.custom-footer .col-md-4 {
+    padding: 10px 20px;
+}
+
+/*Estil per a la galeria*/
+.Galeria{
+        margin: 5px;
+        text-align: center;
+
+    img {
+        padding: 5px;
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+}
+
+
+
+/*Estil per al formulari*/
+textarea {
+    font-family: "Orbitron";
+    background: rgba(0, 120, 255, 0.1);
+    border: 2px solid rgba(0, 180, 255, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1em;
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.3), 0 0 20px rgba(0, 120, 255, 0.2);
+    resize: vertical;
+    width: 100%;
+    min-height: 100px;
+}
+
+textarea:focus {
+    font-family: "Orbitron";
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.7), 0 0 20px rgba(0, 180, 255, 0.6);
+}
+
+
+input[type="text"], input[type="email"], input[type="checkbox"] {
+    font-family: "Orbitron", Arial, sans-serif; 
+    background: rgba(0, 120, 255, 0.1);
+    border: 2px solid rgba(0, 180, 255, 0.7);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9em; 
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.3), 0 0 20px rgba(0, 120, 255, 0.2);
+    width: auto; 
+    min-height: 40px; 
+    outline: none; 
+}
+
+input[type="text"]:focus, input[type="email"]:focus , input[type="checkbox"]:focus{
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.7), 0 0 20px rgba(0, 180, 255, 0.6); /* Sombra de enfoque */
+}
+
+label {
+    font-family: 'Orbitron', sans-serif;
+    color: rgba(255, 255, 255, 0.9); 
+    font-size: 1.1em; 
+    margin-bottom: 5px; 
+}
+
+/*Estils per als botons*/
+input[type="reset"], input[type="submit"] {
+    background: rgba(0, 120, 255, 0.6);
+    border: 2px solid rgba(0, 180, 255, 0.8);
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.4), 0 0 15px rgba(0, 120, 255, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
+    background: rgba(0, 200, 255, 0.7);
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.9), 0 0 15px rgba(0, 120, 255, 0.5);
+}
+
+/*Responsive*/
+@media (max-width: 768px) {
+    .custom-footer .row {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .custom-footer .col-md-4 {
+        margin-bottom: 20px; 
+    }
+}
+
+/* Contenedor de contenido principal y barra lateral */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, rgba(0, 120, 255, 0.2), rgba(0, 200, 255, 0.1));
+    border: 2px solid rgba(0, 180, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.6), 0 0 30px rgba(0, 120, 255, 0.4);
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.7), 0 0 10px rgba(0, 200, 255, 0.5);
+}
+
+.sidebar-title {
+    font-family: "Transformers, Regular";
+    font-size: 1.25em;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.7);
+}
+
+.sidebar-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar-list li {
+    margin: 10px 0;
+}
+
+.sidebar-list a {
+    color: rgba(0, 200, 255, 0.9);
+    text-decoration: underline;
+}
+
+.sidebar-list a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 200, 255, 1);
+}
+
+/* Estil general per a la galeria */
+.Galeria {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estil per a cada element de la imatge dins de la galeria */
+.image-item {
+    background: linear-gradient(135deg, rgba(0, 120, 255, 0.2), rgba(0, 200, 255, 0.1));
+    border: 2px solid rgba(0, 180, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.6), 0 0 30px rgba(0, 120, 255, 0.4);
+    text-align: center;
+    width: 250px; /* Ajusta la mida si cal */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estil per a les imatges dins de la galeria */
+.image-item img {
+    width: 100%; /* Perquè les imatges ocupin tot el marc */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 180, 255, 0.5);
+}
+
+/* Estil per a la descripció de les imatges */
+.image-description {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.7), 0 0 10px rgba(0, 200, 255, 0.5);
+    font-size: 1em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Efecte quan passem el ratolí per sobre de les imatges */
+.image-item:hover {
+    transform: scale(1.05); /* Per fer una animació de creixement */
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.9), 0 0 40px rgba(0, 120, 255, 0.6);
+}
+
+/* Efecte quan passem el ratolí per sobre de la descripció */
+.image-item:hover .image-description {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.8), 0 0 15px rgba(0, 200, 255, 0.6);
+}
+
+.image-name{
+    font-family: 'Orbitron';
+}
+
+.image-description{
+    font-family: 'Roboto';
+}
+
+/*Estil dels icones*/
+.image-item .logo-aut {
+    background-color: rgba(150, 0, 0, 0.6);
+    width: 50px; 
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.image-item .logo-dec {
+    background-color: rgba(75, 0, 130, 0.6);
+    width: 40px; 
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 8px;
+
+}
+
+
+.autobot-bw{
+    width: 50px; 
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 8px;
+
+}
+
+.decepticon-bw{
+    width: 60px; 
+    height: 60px;
+    vertical-align: middle;
+    margin-right: 8px;
+
+}
+
+.imatges-figura{
+    font-family: "Orbitron";
+}
+
+/*Estils pagina personatges autobot*/
+/* Ampliar imatges */
+.image-container img {
+    width: 100%; 
+    height: auto;
+    max-height: 400px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+
+    transform: translateX(-60px); /*Mou les imatges segons convingui*/
+}
+
+/*Centrar les fletxes sota les imatges*/
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+/*Botons de les imatges*/
+.image-container button {
+    background-color: rgba(255, 50, 50, 1); 
+    border: 2px solid #999; 
+    color: #333;
+    font-size: 1.5em; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    border-radius: 0; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px;
+    outline: none;
+    font-family: "Transformers, Regular";
+}
+
+/*Efecte al passar el cursor sobre els botons*/
+.image-container button:hover {
+    background-color: #FF6666; 
+    border-color: #777;
+    color: rgba(150, 0, 0, 0.6); 
+    transform: scale(1.1); 
+}
+
+/*Estils pagina personatges decepticon*/
+/*Ampliar imatges*/
+.image-container-dec img {
+    width: 100%; 
+    height: auto;
+    max-height: 400px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+
+    transform: translateX(-60px); /*Mou les imatges segons convingui*/
+}
+
+/*Centrar les fletxes sota les imatges*/
+.image-container-dec {
+    position: relative;
+    text-align: center;
+}
+
+/*Botons de les imatges*/
+.image-container-dec button {
+    background-color: #9B59B6; 
+    border: 2px solid #999; 
+    color: #333;
+    font-size: 1.5em; 
+    font-weight: bold; 
+    padding: 10px 15px; 
+    border-radius: 0; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px;
+    outline: none;
+    font-family: "Transformers, Regular";
+}
+
+/*Efecte al passar el cursor sobre els botons*/
+.image-container-dec button:hover {
+    background-color: rgba(180, 0, 255, 0.7); 
+    border-color: #777;
+    color: rgba(75, 0, 130, 0.6); 
+    transform: scale(1.1); 
+}
+
+/* Ampliar imatges */
+.image-container-dec-sho img {
+    width: 100%; 
+    height: auto;
+    max-height: 400px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+
+    transform: translateX(40px); /*Mou les imatges segons convingui*/
+}
+
+/*Centrar les fletxes sota les imatges*/
+.image-container-dec-sho {
+    position: relative;
+    text-align: center;
+}
