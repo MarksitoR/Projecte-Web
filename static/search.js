@@ -14,8 +14,8 @@ document.getElementById('searchForm').addEventListener('submit', function (e) {
         'primal': '../figures/optimus_primal.html',
         'galvatron': '../figures/galvatron.html',
         'shockwave': '../figures/shockwave.html',
-        'inici': '../index_Treball.html',
-        'index': '../index_Treball.html',
+        'inici': '../index.html',
+        'index': '../index.html',
         'tarn': '../figures/tarn.html',
         'politica': '../contacte/politica.html'
     };
